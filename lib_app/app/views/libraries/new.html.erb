@@ -1,0 +1,7 @@
+<%= form_for @library do |f| %>
+
+  <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+  <%= f.text_field :floor_count, placeholder: "Floor Count", class: "form-control" %>
+  <%= f.text_field :floor_area,, placeholder: "Floor Area", class: "form-control" %>
+  <%= f.submit %>
+<% end %>

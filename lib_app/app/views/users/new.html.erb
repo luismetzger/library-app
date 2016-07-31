@@ -1,20 +1,23 @@
 <h2 class="text-center">Sign up</h2>
 
-<div class="well-lg block-center">
+<div class="well-lg text-center">
   <%= form_for @user do |f| %>
-    <div>
+    <div class="form-group">
       <%= f.text_field :first_name, placeholder: "First Name" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.text_field :last_name, placeholder: "Last Name" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.text_field :email, placeholder: "Email" %>
     </div>
-    <div>
-      <%= f.password_field :password, placeholder: "Password" %>
+    <div class="form-group">
+      <%= f.password_field :password, placeholder: "Enter new Password" %>
     </div>
-    <div>
+    <div class="form-group">
+      <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+    </div>
+    <div class="form-group">
       <%= f.submit "Sign up" %>
     </div>
 

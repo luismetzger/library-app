@@ -4,10 +4,11 @@ class SessionsController < ApplicationController
     @user = User.confirm(user_params)
     if @user
       login(@user)
-      redirect_to '/users/#{@user_id}'
+      redirect_to '/users/#{@user.id}'
       flash[:notice] = "You have logged in successfully"
     else
       redirect_to '/sign_in'
+      flash[:error] = "Log in error. Please try again."
     end
   end
 
