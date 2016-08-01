@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   get '/sign_in' => 'sessions#new'
   post 'sessions' => 'sessions#create'
 
-  get '/libraries' => to: 'libraries#index'
+  get '/libraries' => 'libraries#index'
   get '/libraries/new' => 'libraries#new', :as => 'new_library'
   post '/libraries' => 'libraries#create'
+  get '/users/:user_id/libraries' => 'library_users#index', :as => 'user_libraries'
+  post '/libraries/:library_id/users' => 'library_users#create', :as => 'library_users'
 
 end
